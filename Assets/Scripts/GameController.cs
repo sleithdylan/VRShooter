@@ -63,6 +63,9 @@ public class GameController : MonoBehaviour
 
             // Allows the enemy to walk towards player
             enemy.direction = (player.transform.position - enemy.transform.position).normalized;
+
+            // Makes enemy to always face the player
+            enemy.transform.LookAt(player.transform);
         }
     }
 }

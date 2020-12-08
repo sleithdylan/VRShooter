@@ -239,6 +239,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3011124217758235726, guid: 45858c6b0f2e8ba47955c20357eb5ad0,
     type: 3}
   shootingCooldown: 0.5
+  meleeCooldown: 0.5
 --- !u!1001 &180591909
 PrefabInstance:
   m_ObjectHideFlags: 0
