@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
         {
             if (shootingTimer <= 0f)
             {
+                // Play gun sound
+                GetComponent<AudioSource>().Play();
+
                 // Cooldown
                 shootingTimer = shootingCooldown;
 
@@ -63,6 +66,9 @@ public class Player : MonoBehaviour
                     bullet.direction = transform.forward;
 
                 } else {
+                    // Stop gun sound
+                    GetComponent<AudioSource>().Stop();
+
                     // Cooldown
                     shootingTimer = meleeCooldown;
 
