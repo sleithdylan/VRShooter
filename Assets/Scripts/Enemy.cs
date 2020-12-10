@@ -20,11 +20,13 @@ public class Enemy : MonoBehaviour
     public float attackingInterval = 0.5f;
     // Attacking timer
     private float attackingTimer = 0f;
+    // Animator
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,8 @@ public class Enemy : MonoBehaviour
             transform.position += direction * speed * Time.deltaTime;
         } else {
             attackingTimer -= Time.deltaTime;
+            // Change animation state
+            anim.SetBool("isAttackingPlayer", true);
 
             if (attackingTimer <= 0f) 
             {
