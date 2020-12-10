@@ -35,6 +35,9 @@ public class Enemy : MonoBehaviour
         // Checks the distance between the enemy and player
         if (Vector3.Distance(transform.position, player.transform.position) < distanceToStop) 
         {
+            // Play walk sound
+            GetComponent<AudioSource>().Play();
+
             isRushingPlayer = false;
         }
         // Checks if enemy is rushing player
@@ -46,6 +49,9 @@ public class Enemy : MonoBehaviour
             attackingTimer -= Time.deltaTime;
             // Change animation state
             anim.SetBool("isAttackingPlayer", true);
+
+            // Stop walk sound
+            GetComponent<AudioSource>().Stop();
 
             if (attackingTimer <= 0f) 
             {
