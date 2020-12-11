@@ -11,13 +11,13 @@ public class GameController : MonoBehaviour
     // Enemy
     public GameObject enemyPrefab;
     // Enemy spawn distance
-    public float enemySpawnDistance = 20f;
-    // Spawn enemy every 2 seconds
-    public float enemyInterval = 2.0f;
+    public float enemySpawnDistance = 100f;
+    // Spawn enemy every 5 seconds
+    public float enemyInterval = 5.0f;
     // Minimum enemies
-    public float minimumEnemyInterval = 0.5f;
-    // After enemy spawns, another will spawn 100ms later
-    public float enemyIntervalDecrement = 0.1f;
+    public float minimumEnemyInterval = 0.02f;
+    // After enemy spawns, another will spawn 1 second later
+    public float enemyIntervalDecrement = 1.0f;
     // Enemy Timer
     private float enemyTimer = 0f;
     // Health Text
