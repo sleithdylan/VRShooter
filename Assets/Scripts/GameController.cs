@@ -21,9 +21,9 @@ public class GameController : MonoBehaviour
     // Enemy Timer
     private float enemyTimer = 0f;
     // Health Text
-    public TextMeshProUGUI Health;
+    public TextMeshPro Health;
     // Health Text
-    public TextMeshProUGUI Gameover;
+    public TextMeshPro Gameover;
     // Enemy Timer
     private float gameTimer = 0f;
     // Restart Timer
