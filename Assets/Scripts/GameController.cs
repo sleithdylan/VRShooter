@@ -62,8 +62,9 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
-   
-        enemyTimer -= Time.deltaTime / 1.5f;
+        
+        // Difficulty
+        enemyTimer -= Time.deltaTime / 1.75f;
 
         if (enemyTimer <= 0) 
         {
