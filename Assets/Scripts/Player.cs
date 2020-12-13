@@ -66,14 +66,20 @@ public class Player : MonoBehaviour
                     bullet.direction = transform.forward;
 
                 } else {
-                    // Stop gun sound
-                    GetComponent<AudioSource>().Stop();
-
                     // Cooldown
                     shootingTimer = meleeCooldown;
 
-                    // Destroy Enemy which is close
-                    Destroy(meleeEnemy.gameObject);
+                    // Spawn bullet
+                    GameObject bulletObject = Instantiate(bulletPrefab);
+
+                    // Set bullet position to players position
+                    bulletObject.transform.position = this.transform.position;
+
+                    // Gets bullet component
+                    Bullet bullet = bulletObject.GetComponent<Bullet>();
+
+                    // Moves bullet forward
+                    bullet.direction = transform.forward;
                 }
             }
         }
