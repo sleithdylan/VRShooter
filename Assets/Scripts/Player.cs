@@ -36,22 +36,9 @@ public class Player : MonoBehaviour
                 // Cooldown
                 shootingTimer = shootingCooldown;
 
-                // Melee
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
-                Enemy meleeEnemy = null;
-                bool meleeAttack = false;
+                bool cooldown = false;
 
-                // If enemy is within radius of player, perform melee
-                foreach(Collider collider in colliders) {
-                    if (collider.GetComponent<Enemy>() != null)
-                    {
-                        meleeAttack = true;
-                        meleeEnemy = collider.GetComponent<Enemy>();
-                        break;
-                    }
-                }
-
-                if (meleeAttack == false) 
+                if (cooldown == false) 
                 {
                     // Spawn bullet
                     GameObject bulletObject = Instantiate(bulletPrefab);
