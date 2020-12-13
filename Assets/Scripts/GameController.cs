@@ -11,18 +11,18 @@ public class GameController : MonoBehaviour
     // Enemy
     public GameObject enemyPrefab;
     // Enemy spawn distance
-    public float enemySpawnDistance = 100f;
-    // Spawn enemy every 5 seconds
-    public float enemyInterval = 5.0f;
+    public float enemySpawnDistance = 20f;
+    // Spawn enemy every 2 seconds
+    public float enemyInterval = 2.0f;
     // Minimum enemies
-    public float minimumEnemyInterval = 0.02f;
+    public float minimumEnemyInterval = 0.5f;
     // After enemy spawns, another will spawn 1 second later
-    public float enemyIntervalDecrement = 1.0f;
+    public float enemyIntervalDecrement = 0.1f;
     // Enemy Timer
     private float enemyTimer = 0f;
     // Health Text
     public TextMeshPro Health;
-    // Health Text
+    // Gameover Text
     public TextMeshPro Gameover;
     // Enemy Timer
     private float gameTimer = 0f;
@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
             }
         }
    
-        enemyTimer -= Time.deltaTime;
+        enemyTimer -= Time.deltaTime / 1.5f;
 
         if (enemyTimer <= 0) 
         {

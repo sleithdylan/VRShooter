@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     // Enemy damage
     public int damage = 3;
     // Enemy Speed
-    public float speed = 3.5f;
+    public float speed = 3f;
     // Enemy stop distance
     public float distanceToStop = 1f;
     // Enemy Direction

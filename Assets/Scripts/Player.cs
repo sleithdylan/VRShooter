@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
 
                 } else {
                     // Cooldown
-                    shootingTimer = meleeCooldown;
+                    shootingTimer = shootingCooldown;
 
                     // Spawn bullet
                     GameObject bulletObject = Instantiate(bulletPrefab);
